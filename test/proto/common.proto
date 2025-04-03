@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package protogeneratorqt.common;
+
+enum GlobalEnum {
+    OPTION_1 = 0;
+    OPTION_2 = 1;
+    OPTION_3 = 2;
+}

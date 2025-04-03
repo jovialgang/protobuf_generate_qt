@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package protogeneratorqt;
+
+message Unnested
+{
+    message NestedOne
+    {
+        string string_field  = 2;
+        int32  integer_field = 3;
+    }
+
+    message NestedTwo
+    {
+        NestedOne nested_field = 6;
+    }
+
+    string top_string_field  = 2;
+    int32  top_integer_field = 3;
+
+    enum TopEnum {
+        OPTION_1 = 0;
+        OPTION_2 = 1;
+    }
+}

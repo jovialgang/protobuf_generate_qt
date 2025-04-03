@@ -1,0 +1,259 @@
+syntax = "proto3";
+
+package protogenqt;
+
+// package name;
+
+enum GlobalEnum {
+    OPTION_1 = 0;
+    OPTION_2 = 1;
+    OPTION_3 = 2;
+}
+
+message GlobalTest
+{
+    enum NestedEnum {
+        OPTION_4 = 0;
+        OPTION_5 = 1;
+        OPTION_6 = 2;
+    }
+
+    message NestedMessage
+    {
+        double double_field = 1;
+        float  float_field  = 2;
+
+        int32  integer32_field  = 3;
+        int64  integer64_field  = 4;
+        uint32 uinteger32_field = 5;
+        uint64 uinteger64_field = 6;
+        bool   bool_field       = 7;
+        string string_field     = 8;
+
+        GlobalTest global_test_field = 9;
+        GlobalEnum global_enum_field = 10;
+        NestedEnum nested_enum_field = 11;
+
+        oneof state
+        {
+            double state_double     = 101;
+            float  state_float      = 102;
+            int32  state_integer32  = 103;
+            int64  state_integer64  = 104;
+            uint32 state_uinteger32 = 105;
+            uint64 state_uinteger64 = 106;
+            bool   state_bool       = 107;
+            string state_string     = 108;
+
+            GlobalTest state_global_test = 109;
+            GlobalEnum state_global_enum = 110;
+            NestedEnum state_nested_enum = 111;
+        };
+
+        optional double optional_double     = 201;
+        optional float  optional_float      = 202;
+        optional int32  optional_integer32  = 203;
+        optional int64  optional_integer64  = 204;
+        optional uint32 optional_uinteger32 = 205;
+        optional uint64 optional_uinteger64 = 206;
+        optional bool   optional_bool       = 207;
+        optional string optional_string     = 208;
+
+        optional GlobalTest optional_global_test = 209;
+        optional GlobalEnum optional_global_enum = 210;
+        optional NestedEnum optional_nested_enum = 211;
+
+        repeated double repeated_double     = 301;
+        repeated float  repeated_float      = 302;
+        repeated int32  repeated_integer32  = 303;
+        repeated int64  repeated_integer64  = 304;
+        repeated uint32 repeated_uinteger32 = 305;
+        repeated uint64 repeated_uinteger64 = 306;
+        repeated bool   repeated_bool       = 307;
+        repeated string repeated_string     = 308;
+
+        repeated GlobalTest repeated_global_test = 309;
+        repeated GlobalEnum repeated_global_enum = 310;
+        repeated NestedEnum repeated_nested_enum = 311;
+    }
+
+    double double_field = 1;
+    float  float_field  = 2;
+
+    int32  integer32_field  = 3;
+    int64  integer64_field  = 4;
+    uint32 uinteger32_field = 5;
+    uint64 uinteger64_field = 6;
+    bool   bool_field       = 7;
+    string string_field     = 8;
+
+    GlobalTest global_test_field = 9;
+    GlobalEnum global_enum_field = 10;
+    NestedEnum nested_enum_field = 11;
+
+    oneof state
+    {
+        double state_double     = 101;
+        float  state_float      = 102;
+        int32  state_integer32  = 103;
+        int64  state_integer64  = 104;
+        uint32 state_uinteger32 = 105;
+        uint64 state_uinteger64 = 106;
+        bool   state_bool       = 107;
+        string state_string     = 108;
+
+        GlobalTest state_global_test = 109;
+        GlobalEnum state_global_enum = 110;
+        NestedEnum state_nested_enum = 111;
+    };
+
+    optional double optional_double     = 201;
+    optional float  optional_float      = 202;
+    optional int32  optional_integer32  = 203;
+    optional int64  optional_integer64  = 204;
+    optional uint32 optional_uinteger32 = 205;
+    optional uint64 optional_uinteger64 = 206;
+    optional bool   optional_bool       = 207;
+    optional string optional_string     = 208;
+
+    optional GlobalTest optional_global_test = 209;
+    optional GlobalEnum optional_global_enum = 210;
+    optional NestedEnum optional_nested_enum = 211;
+
+    repeated double repeated_double     = 301;
+    repeated float  repeated_float      = 302;
+    repeated int32  repeated_integer32  = 303;
+    repeated int64  repeated_integer64  = 304;
+    repeated uint32 repeated_uinteger32 = 305;
+    repeated uint64 repeated_uinteger64 = 306;
+    repeated bool   repeated_bool       = 307;
+    repeated string repeated_string     = 308;
+
+    repeated GlobalTest repeated_global_test = 309;
+    repeated GlobalEnum repeated_global_enum = 310;
+    repeated NestedEnum repeated_nested_enum = 311;
+}
+
+message Test
+{
+    enum NestedEnum {
+        OPTION_4 = 0;
+        OPTION_5 = 1;
+        OPTION_6 = 2;
+    }
+
+    message NestedMessage
+    {
+        double double_field = 1;
+        float  float_field  = 2;
+
+        int32  integer32_field  = 3;
+        int64  integer64_field  = 4;
+        uint32 uinteger32_field = 5;
+        uint64 uinteger64_field = 6;
+        bool   bool_field       = 7;
+        string string_field     = 8;
+
+        GlobalTest global_test_field = 9;
+        GlobalEnum global_enum_field = 10;
+        NestedEnum nested_enum_field = 11;
+
+        oneof state
+        {
+            double state_double     = 101;
+            float  state_float      = 102;
+            int32  state_integer32  = 103;
+            int64  state_integer64  = 104;
+            uint32 state_uinteger32 = 105;
+            uint64 state_uinteger64 = 106;
+            bool   state_bool       = 107;
+            string state_string     = 108;
+
+            GlobalTest state_global_test = 109;
+            GlobalEnum state_global_enum = 110;
+            NestedEnum state_nested_enum = 111;
+        };
+
+        optional double optional_double     = 201;
+        optional float  optional_float      = 202;
+        optional int32  optional_integer32  = 203;
+        optional int64  optional_integer64  = 204;
+        optional uint32 optional_uinteger32 = 205;
+        optional uint64 optional_uinteger64 = 206;
+        optional bool   optional_bool       = 207;
+        optional string optional_string     = 208;
+
+        optional GlobalTest optional_global_test = 209;
+        optional GlobalEnum optional_global_enum = 210;
+        optional NestedEnum optional_nested_enum = 211;
+
+        repeated double repeated_double     = 301;
+        repeated float  repeated_float      = 302;
+        repeated int32  repeated_integer32  = 303;
+        repeated int64  repeated_integer64  = 304;
+        repeated uint32 repeated_uinteger32 = 305;
+        repeated uint64 repeated_uinteger64 = 306;
+        repeated bool   repeated_bool       = 307;
+        repeated string repeated_string     = 308;
+
+        repeated GlobalTest repeated_global_test = 309;
+        repeated GlobalEnum repeated_global_enum = 310;
+        repeated NestedEnum repeated_nested_enum = 311;
+    }
+
+    double double_field = 1;
+    float  float_field  = 2;
+
+    int32  integer32_field  = 3;
+    int64  integer64_field  = 4;
+    uint32 uinteger32_field = 5;
+    uint64 uinteger64_field = 6;
+    bool   bool_field       = 7;
+    string string_field     = 8;
+
+    GlobalTest global_test_field = 9;
+    GlobalEnum global_enum_field = 10;
+    NestedEnum nested_enum_field = 11;
+
+    oneof state
+    {
+        double state_double     = 101;
+        float  state_float      = 102;
+        int32  state_integer32  = 103;
+        int64  state_integer64  = 104;
+        uint32 state_uinteger32 = 105;
+        uint64 state_uinteger64 = 106;
+        bool   state_bool       = 107;
+        string state_string     = 108;
+
+        GlobalTest state_global_test = 109;
+        GlobalEnum state_global_enum = 110;
+        NestedEnum state_nested_enum = 111;
+    };
+
+    optional double optional_double     = 201;
+    optional float  optional_float      = 202;
+    optional int32  optional_integer32  = 203;
+    optional int64  optional_integer64  = 204;
+    optional uint32 optional_uinteger32 = 205;
+    optional uint64 optional_uinteger64 = 206;
+    optional bool   optional_bool       = 207;
+    optional string optional_string     = 208;
+
+    optional GlobalTest optional_global_test = 209;
+    optional GlobalEnum optional_global_enum = 210;
+    optional NestedEnum optional_nested_enum = 211;
+
+    repeated double repeated_double     = 301;
+    repeated float  repeated_float      = 302;
+    repeated int32  repeated_integer32  = 303;
+    repeated int64  repeated_integer64  = 304;
+    repeated uint32 repeated_uinteger32 = 305;
+    repeated uint64 repeated_uinteger64 = 306;
+    repeated bool   repeated_bool       = 307;
+    repeated string repeated_string     = 308;
+
+    repeated GlobalTest repeated_global_test = 309;
+    repeated GlobalEnum repeated_global_enum = 310;
+    repeated NestedEnum repeated_nested_enum = 311;
+}

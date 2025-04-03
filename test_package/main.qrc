@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/TestWindow.qml</file>
+        <file>qml/OneOfInput.qml</file>
+        <file>qml/OptionalInput.qml</file>
+        <file>qml/RepeatedTable.qml</file>
+        <file>qml/TableAddItem.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>qml/SingleInput.qml</file>
+    </qresource>
+</RCC>

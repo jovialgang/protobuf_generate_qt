@@ -1,0 +1,58 @@
+// This file describes Internet Protocol v4 or v6 endpoint
+syntax = "proto3";
+
+import "common.proto";
+
+package protogeneratorqt;
+
+//  IP endpoint
+message IpEndpoint
+{
+    string address = 1;  // Internet Protocol (IP) address, i.e. "127.0.0.1" for localhost
+    int32  port    = 2;  // TCP or UDP port in the range 1-65535
+}
+
+message Test
+{
+    enum Enum {
+        OPTION_1 = 0;
+        OPTION_2 = 1;
+    }
+    /*
+    Четыре поля ввода
+    */
+    int32      integer_field = 1;
+    string     string_field = 2;
+    IpEndpoint ip_endpoint_field = 3;
+    Enum       enum_field = 4;
+    common.GlobalEnum global_enum_field = 5;
+
+    /*
+    ComboBox выбора одного варианта и учитывая это поле ввода
+    */
+    oneof state
+    {
+        int32      state_integer = 101;
+        string     state_string = 102;
+        IpEndpoint state_ip_endpoint = 103;
+        Enum       state_enum = 104;
+        common.GlobalEnum state_global_enum = 105;
+    };
+
+    /*
+    CheckBox на каждый и поле ввода
+    */
+    optional IpEndpoint optional_ip_endpoint    = 201;
+    optional int32      optional_integer    = 202;
+    optional string     optional_string    = 203;
+    optional Enum       optional_enum = 204;
+    optional common.GlobalEnum optional_global_enum = 205;
+
+    /*
+    N раз вывести элементы группируя по три с полями редактирования
+    */
+    repeated IpEndpoint repeated_ip_endpoint = 301;
+    repeated string     repeated_string = 302;
+    repeated Enum       repeated_enum = 303;
+    repeated common.GlobalEnum repeated_global_enum = 305;
+}
